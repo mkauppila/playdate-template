@@ -29,13 +29,12 @@ set(PLAYDATE_GAME_NAME hello_world)
 set(PLAYDATE_GAME_DEVICE hello_world_DEVICE)
 
 project(${PLAYDATE_GAME_NAME} C ASM)
-set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+target_compile_definitions()
 
 if (TOOLCHAIN STREQUAL "armgcc")
 	add_executable(${PLAYDATE_GAME_DEVICE} src/main.c)
 else()
-	add_library(${PLAYDATE_GAME_NAME} SHARED src/main.c )
+	add_library(${PLAYDATE_GAME_NAME} SHARED src/main.c)
 endif()
 
 include(${SDK}/C_API/buildsupport/playdate_game.cmake)
-
