@@ -9,7 +9,7 @@
 static int update(void *userdata);
 
 const int screen_width = 400;
-const int screen_height = 400;
+const int screen_height = 240;
 
 typedef struct game_s {
 } game_t;
